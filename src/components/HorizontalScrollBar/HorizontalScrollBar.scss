@@ -1,0 +1,22 @@
+@use '../../variables';
+
+.react-horizontal-scrolling-menu--scroll-container {
+    max-width: 100%;
+    
+    .react-horizontal-scrolling-menu--item {
+        display: flex;
+        flex-direction: column;
+        background: variables.$black;
+        color: #fff;
+
+        &:nth-of-type(even){
+            background: #e0e0e0;
+        }
+
+        .MuiBox-root {
+            display: flex;
+            height: 100%;
+        }
+    }
+
+}

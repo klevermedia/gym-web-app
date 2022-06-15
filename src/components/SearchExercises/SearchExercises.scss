@@ -1,0 +1,21 @@
+@use '../../variables';
+
+.button-search {
+    
+    &:hover {
+        background-color: variables.$lime !important;
+        
+        svg {
+            fill: variables.$black;
+        }
+    }
+
+}
+
+.search-field {
+    &:hover {
+        border-color: transparent !important;
+        box-shadow: none !important;
+        outline: none !important;
+    }
+}
