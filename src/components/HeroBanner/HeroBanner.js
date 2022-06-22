@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
 
-import './HeroBanner.scss'
+import './HeroBanner.scss';
 
 const HeroBanner = () => {
   return (

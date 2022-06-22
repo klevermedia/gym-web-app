@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const ExerciseDetail = () => {
   return (
@@ -6,4 +6,4 @@ const ExerciseDetail = () => {
   )
 }
 
-export default ExerciseDetail
+export default ExerciseDetail;
