@@ -1,5 +1,12 @@
 @use '../../variables';
 
+.search-wrapper {
+    background-color: variables.$black;
+    margin: 0 20px;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+}
+
 .button-search {
     
     &:hover {
@@ -13,8 +20,18 @@
 }
 
 .search-field {
-    &:hover {
-        border-color: transparent !important;
+
+    label {
+        color: variables.$black;
+    }
+
+    fieldset {
+        border-color: variables.$black;
+        border-width: 2px;
+    }
+
+    &:hover fieldset {
+        border-color: variables.$lime !important;
         box-shadow: none !important;
         outline: none !important;
     }

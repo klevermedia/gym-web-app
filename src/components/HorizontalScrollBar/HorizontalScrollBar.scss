@@ -1,7 +1,27 @@
 @use '../../variables';
 
+.react-horizontal-scrolling-menu--wrapper {
+    display: flex;
+    align-items: center;
+
+    svg {
+        fill: rgba(255, 255, 255, .3);
+        transition: all 300ms ease-in-out;
+        -webkit-transition: all 300ms ease-in-out;
+        -moz-transition: all 300ms ease-in-out;
+        -ms-transition: all 300ms ease-in-out;
+        -o-transition: all 300ms ease-in-out;
+
+        &:hover {
+            fill: rgba(255, 255, 255, 1);
+            cursor: pointer;
+        }
+    }
+}
+
 .react-horizontal-scrolling-menu--scroll-container {
     max-width: 100%;
+    justify-content: space-evenly;
     
     .react-horizontal-scrolling-menu--item {
         display: flex;

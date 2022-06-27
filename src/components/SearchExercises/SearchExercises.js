@@ -37,43 +37,44 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart, search, setSearc
   }
 
   return (
-    <Stack alignItems='center' justifyContent='center' mt='30px' p='40px'>
-      <Typography fontFamily='Inter' fontWeight='bold' mb='20px' sx={{
-        fontSize: { xs: '24px', md: '42px' },
-      }}>
-        Get started
-      </Typography>
-
-      <Box alignItems='center' justifyContent='center' sx={{
+    <Stack alignItems='center' justifyContent='center'>
+      <Box id='search' py='80px' alignItems='center' justifyContent='center' sx={{
         width: { xs: '100%', lg: '50%' },
         textAlign: 'center',
-        position: 'relative'
       }}>
-        <TextField
-          placeholder='Deadlifts, Squats, Barbell Curls, etc.'
-          label='Search exercise library'
-          value={search}
-          variant='outlined'
-          size='medium'
-          type='text'
-          className='search-field'
-          onChange={(e) => setSearch(e.target.value.toLowerCase())}
-          sx={{
-            width: '100%',
-          }}
-        />
-        <IconButton className='button-search' onClick={handleSearch} sx={{
-          background: '#090714',
-          position: 'absolute',
-          right: '8px',
-          top: '8px'
+        <Typography variant='h3' mb='20px'>
+        Get started
+        </Typography>
+
+        <Box  alignItems='center' justifyContent='center' sx={{
+          position: 'relative'
         }}>
-          <Search sx={{
-            color: '#FFF',
-          }} />
-        </IconButton>
+          <TextField
+            placeholder='Deadlifts, Squats, Barbell Curls, etc.'
+            label='Search exercise library'
+            value={search}
+            variant='outlined'
+            size='medium'
+            type='text'
+            className='search-field'
+            onChange={(e) => setSearch(e.target.value.toLowerCase())}
+            sx={{
+              width: '100%',
+            }}
+          />
+          <IconButton className='button-search' onClick={handleSearch} sx={{
+            background: '#090714',
+            position: 'absolute',
+            right: '8px',
+            top: '8px'
+          }}>
+            <Search sx={{
+              color: '#FFF',
+            }} />
+          </IconButton>
+        </Box>
       </Box>
-      <Box p="40px" sx={{ maxWidth: '100%' }}>
+      <Box className='search-wrapper' p="40px">
         <HorizontalScrollBar data={bodyParts} setBodyPart={setBodyPart} bodyPart={bodyPart} />
       </Box>
     </Stack>

@@ -9,6 +9,7 @@ import Footer from './components/Footer/Footer';
 
 const theme = createTheme({
     palette: {
+        mode: 'dark',
         primary: {
             main: '#090714',
         }

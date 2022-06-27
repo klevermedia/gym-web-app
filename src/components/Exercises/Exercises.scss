@@ -1,0 +1,36 @@
+@use '../../variables';
+
+.exercises-wrapper {
+    background: variables.$black;
+    margin: 0 20px;
+    box-sizing: border-box;
+}
+
+.title {
+    text-align: center;
+    color: variables.$black;
+    background: variables.$lime;
+    padding: 20px;
+    margin: 0 -15px 60px -15px !important;
+
+    span {
+        position: relative;
+    }
+
+    span::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: variables.$black;
+    }
+
+}
+
+.MuiPagination-root {
+    justify-content: center;
+    display: flex;
+    margin: 40px 0;
+}

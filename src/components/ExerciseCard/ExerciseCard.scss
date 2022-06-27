@@ -1,0 +1,35 @@
+@use '../../variables';
+
+a.exercise-card {
+    position: relative;
+
+    .card-title {
+        padding: 10px;
+        position: absolute;
+        bottom: 15px;
+        left: 10px;
+        font-size: 20px;
+        background: variables.$lime;
+        color: variables.$black;
+    }
+
+    .buttons {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        button {
+            color: variables.$lime;
+            background: variables.$black;
+            font-size: 14px;
+            letter-spacing: 1px;
+            margin-left: 5px;
+            padding: 5px;
+            border-radius: 30px;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            -ms-border-radius: 30px;
+            -o-border-radius: 30px;
+}
+    }
+}

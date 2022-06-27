@@ -1,0 +1,23 @@
+@use '../../variables';
+
+.body-part-card {
+    border-width: 2px;
+    border-style: solid;
+    border-color: transparent;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+
+    &:hover {
+        border-bottom-color: variables.$lime;
+    }
+}
+
+.body-part-card.active {
+    border-color: variables.$lime;
+    color: variables.$lime;
+}

@@ -34,20 +34,10 @@ const HeroBanner = () => {
         Check out the most effective exercises to help you acheive a healthier lifestyle.
       </Typography>
       
-      <Button variant='outlined' sx={{
+      <Button variant='outlined' href='#search' sx={{
         alignSelf: 'self-start'
       }}>Browse exercises</Button>
 
-      <Typography fontWeight={600} fontFamily='Inter' sx={{
-        opacity: 0.1,
-        display: { md: 'block', xs: 'none' },
-        fontSize: '20vw',
-        position: 'absolute',
-        bottom: '-15%',
-        pointerEvents: 'none',
-      }}>
-        exercises
-      </Typography>
     </Box>
   )
 }

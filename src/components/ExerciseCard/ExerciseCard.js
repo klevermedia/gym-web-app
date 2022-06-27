@@ -1,36 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Stack, Typography } from '@mui/material';
+import './ExerciseCard.scss';
 
 const ExerciseCard = ({ exercise }) => {
   return (
     <Link className='exercise-card' to ={`/exercise/${exercise.id}`}>
       <img src={exercise.gifUrl} alt={exercise.name} loading='lazy' />
-      <Stack direction ='row'>
-        <Button variant="contained" sx={{
-          marginLeft: '21px',
-          color: '#fff',
-          backgroundColor: '#f9f9f9',
-          fontSize: '20px',
-          textTransform: 'capitalize',
-          border: 'none',
-          textDecoration: 'none'
-        }}>
+      <Stack direction='row' className='buttons'>
+        <Button variant='contained'>
           {exercise.bodyPart}
         </Button>
-        <Button variant="contained" sx={{
-          marginLeft: '21px',
-          color: '#fff',
-          backgroundColor: '#f9f9f9',
-          fontSize: '20px',
-          textTransform: 'capitalize',
-          border: 'none',
-          textDecoration: 'none'
-        }}>
+        <Button variant='contained'>
           {exercise.target}
         </Button>
       </Stack>
-      <Typography>{exercise.name}</Typography>
+      <Typography className='card-title'>{exercise.name}</Typography>
     </Link>
   )
 }

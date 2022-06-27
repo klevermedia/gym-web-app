@@ -31,8 +31,9 @@ a {
 .banner-container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: calc(100vh - 40px);
     min-height: 700px;
+    margin: 20px;
     background-color: variables.$black;
     background-image: url('../public/assets/images/hero.jpg');
     background-size: cover;

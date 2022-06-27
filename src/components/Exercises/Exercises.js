@@ -4,6 +4,7 @@ import { Box, Stack, Typography } from '@mui/material';
 
 import ExerciseCard from '../ExerciseCard/ExerciseCard';
 import { exerciseOptions, fetchData } from '../../utils/fetchData';
+import './Exercises.scss';
 
 const Exercises = ({ exercises, setExercises, bodyPart, search }) => {
 
@@ -28,28 +29,23 @@ const Exercises = ({ exercises, setExercises, bodyPart, search }) => {
       if (bodyPart === 'all') {
         exerciseData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
       } else {
-        exerciseData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises?bodyPart=${bodyPart}`, exerciseOptions);
+        exerciseData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exerciseOptions);
       }
 
       setExercises(exerciseData);
-      fetchExerciseData();
     }
-  });
+    
+    fetchExerciseData();
+  }, [bodyPart]);
 
-  console.log(exercises);
   return (
-    <Box id={exercises} mt='50px' p='20px' sx={{
-      margiinTop : {
-        lg: '110px',
-      }
-    }}>
-      <Typography variant='h3'>
-        Showing results for {search != '' ? search : bodyPart}
+    <Box p='15px' className='exercises-wrapper'>
+      <Typography variant='h3' className='title'>
+        Showing <span>{search !== '' ? search : bodyPart}</span> exercises
       </Typography>
       <Stack direction='row' flexWrap='wrap' justifyContent='center' sx={{
         gap: {
-          xs: '50px',
-          lg: '100px',
+          xs: '30px'
         }
       }}>
         {currentExercises.map((exercise, index) => (
